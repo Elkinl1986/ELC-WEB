@@ -1,0 +1,616 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Default title",
+    "description": "La API de selección consolidada está destinada a ayudar a las organizaciones a cumplir con sus obligaciones de cumplimiento. Los casos de uso típicos incluyen la selección de las partes involucradas en transacciones financieras y de remesas, regulaciones de seguros, comercio de importación y exportación, KYC / CDD organizacional en curso o en la ejecución de un plan AML.",
+    "version": "1.0"
+  },
+  "host": "search.ofac-api.com",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [],
+  "produces": [],
+  "paths": {
+    "/v3": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "matches": {
+                  "type": "object",
+                  "properties": {
+                    "additionalProp": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "source": {
+                            "type": "string",
+                            "description": "source"
+                          },
+                          "firstName": {
+                            "type": "string",
+                            "description": "firstName"
+                          },
+                          "lastName": {
+                            "type": "string",
+                            "description": "lastName"
+                          },
+                          "fullName": {
+                            "type": "string",
+                            "description": "fullName"
+                          },
+                          "dob": {
+                            "type": "string",
+                            "description": "dob"
+                          },
+                          "addresses": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "uid": {
+                                  "type": "string",
+                                  "description": "uid"
+                                },
+                                "address1": {
+                                  "type": "string",
+                                  "description": "address1"
+                                },
+                                "address2": {
+                                  "type": "string",
+                                  "description": "address2"
+                                },
+                                "address3": {
+                                  "type": "string",
+                                  "description": "address3"
+                                },
+                                "address4": {
+                                  "type": "string",
+                                  "description": "address4"
+                                },
+                                "city": {
+                                  "type": "string",
+                                  "description": "city"
+                                },
+                                "stateOrProvince": {
+                                  "type": "string",
+                                  "description": "stateOrProvince"
+                                },
+                                "postalCode": {
+                                  "type": "string",
+                                  "description": "postalCode"
+                                },
+                                "country": {
+                                  "type": "string",
+                                  "description": "country"
+                                },
+                                "fullAddressString": {
+                                  "type": "string",
+                                  "description": "fullAddressString"
+                                }
+                              }
+                            },
+                            "description": "addresses"
+                          },
+                          "citizenship": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            },
+                            "description": "citizenship"
+                          },
+                          "phoneNumbers": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            },
+                            "description": "phoneNumbers"
+                          },
+                          "title": {
+                            "type": "string",
+                            "description": "title"
+                          },
+                          "uid": {
+                            "type": "integer",
+                            "format": "int32",
+                            "description": "uid"
+                          },
+                          "sdnType": {
+                            "type": "string",
+                            "description": "sdnType"
+                          },
+                          "remarks": {
+                            "type": "string",
+                            "description": "remarks"
+                          },
+                          "gender": {
+                            "type": "string",
+                            "description": "gender"
+                          },
+                          "programs": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            },
+                            "description": "programs"
+                          },
+                          "additionalSanctions": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            },
+                            "description": "additionalSanctions"
+                          },
+                          "passports": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "source": {
+                                  "type": "string",
+                                  "description": "source"
+                                },
+                                "sourceId": {
+                                  "type": "string",
+                                  "description": "sourceId"
+                                },
+                                "passportNumber": {
+                                  "type": "string",
+                                  "description": "passportNumber"
+                                },
+                                "passportCountry": {
+                                  "type": "string",
+                                  "description": "passportCountry"
+                                },
+                                "issueDate": {
+                                  "type": "string",
+                                  "description": "issueDate"
+                                },
+                                "expirationDate": {
+                                  "type": "string",
+                                  "description": "expirationDate"
+                                }
+                              }
+                            },
+                            "description": "passports"
+                          },
+                          "driversLicenses": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "licenseNumber": {
+                                  "type": "string",
+                                  "description": "licenseNumber"
+                                },
+                                "licenseCountry": {
+                                  "type": "string",
+                                  "description": "licenseCountry"
+                                }
+                              }
+                            },
+                            "description": "driversLicenses"
+                          },
+                          "callSign": {
+                            "type": "string",
+                            "description": "callSign"
+                          },
+                          "vesselType": {
+                            "type": "string",
+                            "description": "vesselType"
+                          },
+                          "vesselFlag": {
+                            "type": "string",
+                            "description": "vesselFlag"
+                          },
+                          "tonnage": {
+                            "type": "string",
+                            "description": "tonnage"
+                          },
+                          "grossRegisteredTonnage": {
+                            "type": "string",
+                            "description": "grossRegisteredTonnage"
+                          },
+                          "vesselOwner": {
+                            "type": "string",
+                            "description": "vesselOwner"
+                          },
+                          "effectiveDate": {
+                            "type": "string",
+                            "description": "effectiveDate"
+                          },
+                          "expirationDate": {
+                            "type": "string",
+                            "description": "expirationDate"
+                          },
+                          "standardOrder": {
+                            "type": "string",
+                            "description": "standardOrder"
+                          },
+                          "lastUpdate": {
+                            "type": "string",
+                            "description": "lastUpdate"
+                          },
+                          "action": {
+                            "type": "string",
+                            "description": "action"
+                          },
+                          "frCitation": {
+                            "type": "string",
+                            "description": "frCitation"
+                          },
+                          "score": {
+                            "type": "integer",
+                            "format": "int32",
+                            "description": "score"
+                          },
+                          "akas": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "source": {
+                                  "type": "string",
+                                  "description": "source"
+                                },
+                                "sourceId": {
+                                  "type": "string",
+                                  "description": "sourceId"
+                                },
+                                "score": {
+                                  "type": "integer",
+                                  "format": "int32",
+                                  "description": "score"
+                                },
+                                "category": {
+                                  "type": "string",
+                                  "description": "category"
+                                },
+                                "lastName": {
+                                  "type": "string",
+                                  "description": "lastName"
+                                },
+                                "firstName": {
+                                  "type": "string",
+                                  "description": "firstName"
+                                },
+                                "name": {
+                                  "type": "string",
+                                  "description": "name"
+                                },
+                                "nameFormatted": {
+                                  "type": "string",
+                                  "description": "nameFormatted"
+                                },
+                                "city": {
+                                  "type": "string",
+                                  "description": "city"
+                                },
+                                "country": {
+                                  "type": "string",
+                                  "description": "country"
+                                },
+                                "dob": {
+                                  "type": "string",
+                                  "description": "dob"
+                                }
+                              }
+                            },
+                            "description": "akas"
+                          },
+                          "ids": {
+                            "type": "array",
+                            "items": {
+                              "type": "object",
+                              "properties": {
+                                "source": {
+                                  "type": "string",
+                                  "description": "source"
+                                },
+                                "sourceId": {
+                                  "type": "string",
+                                  "description": "sourceId"
+                                },
+                                "type": {
+                                  "type": "string",
+                                  "description": "type"
+                                },
+                                "idNumber": {
+                                  "type": "string",
+                                  "description": "idNumber"
+                                },
+                                "country": {
+                                  "type": "string",
+                                  "description": "country"
+                                },
+                                "issueDate": {
+                                  "type": "string",
+                                  "description": "issueDate"
+                                },
+                                "expirationDate": {
+                                  "type": "string",
+                                  "description": "expirationDate"
+                                },
+                                "idDetailsString": {
+                                  "type": "string",
+                                  "description": "idDetailsString"
+                                }
+                              }
+                            },
+                            "description": "ids"
+                          }
+                        }
+                      },
+                      "description": "additionalProp"
+                    }
+                  },
+                  "description": "matches"
+                }
+              }
+            }
+          }
+        },
+        "summary": "Búsqueda de individuos o entidades",
+        "description": "Examina a su cliente (caso) contra el conjunto de datos combinados de OFAC-API.com utilizando nombre, ciudadanía, fecha de nacimiento, pasaporte y género.",
+        "operationId": "Individuos_Entidades",
+        "parameters": [
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "default": "application/json",
+            "x-ms-visibility": "internal"
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "default": "application/json",
+            "x-ms-visibility": "internal"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "apiKey": {
+                  "type": "string",
+                  "description": "apiKey",
+                  "title": "",
+                  "default": "{ApiKey}",
+                  "x-ms-visibility": "internal"
+                },
+                "includeAlias": {
+                  "type": "boolean",
+                  "description": "includeAlias",
+                  "title": "",
+                  "enum": [
+                    "",
+                    true,
+                    false
+                  ],
+                  "x-ms-visibility": "internal",
+                  "default": true
+                },
+                "informalName": {
+                  "type": "boolean",
+                  "description": "informalName",
+                  "title": "",
+                  "enum": [
+                    "",
+                    true,
+                    false
+                  ],
+                  "default": true,
+                  "x-ms-visibility": "internal"
+                },
+                "minScore": {
+                  "type": "integer",
+                  "format": "int32",
+                  "description": "minScore"
+                },
+                "format": {
+                  "type": "string",
+                  "description": "format"
+                },
+                "source": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "source"
+                },
+                "type": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "description": "type"
+                },
+                "cases": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string",
+                        "description": "name"
+                      },
+                      "dob": {
+                        "type": "string",
+                        "description": "dob"
+                      },
+                      "citizenship": {
+                        "type": "string",
+                        "description": "citizenship"
+                      },
+                      "phoneNumber": {
+                        "type": "string",
+                        "description": "phoneNumber"
+                      },
+                      "type": {
+                        "type": "string",
+                        "description": "type"
+                      },
+                      "address": {
+                        "type": "object",
+                        "properties": {
+                          "address1": {
+                            "type": "string",
+                            "description": "address1"
+                          },
+                          "address2": {
+                            "type": "string",
+                            "description": "address2"
+                          },
+                          "address3": {
+                            "type": "string",
+                            "description": "address3"
+                          },
+                          "address4": {
+                            "type": "string",
+                            "description": "address4"
+                          },
+                          "city": {
+                            "type": "string",
+                            "description": "city"
+                          },
+                          "stateOrProvince": {
+                            "type": "string",
+                            "description": "stateOrProvince"
+                          },
+                          "postalCode": {
+                            "type": "string",
+                            "description": "postalCode"
+                          },
+                          "country": {
+                            "type": "string",
+                            "description": "country"
+                          }
+                        },
+                        "description": "address"
+                      },
+                      "passport": {
+                        "type": "object",
+                        "properties": {
+                          "passportNumber": {
+                            "type": "string",
+                            "description": "passportNumber"
+                          },
+                          "passportCountry": {
+                            "type": "string",
+                            "description": "passportCountry"
+                          }
+                        },
+                        "description": "passport"
+                      },
+                      "driversLicense": {
+                        "type": "object",
+                        "properties": {
+                          "licenseNumber": {
+                            "type": "string",
+                            "description": "licenseNumber"
+                          },
+                          "licenseCountry": {
+                            "type": "string",
+                            "description": "licenseCountry"
+                          }
+                        },
+                        "description": "driversLicense"
+                      },
+                      "gender": {
+                        "type": "string",
+                        "description": "gender"
+                      },
+                      "ssn": {
+                        "type": "string",
+                        "description": "ssn"
+                      },
+                      "taxId": {
+                        "type": "string",
+                        "description": "taxId"
+                      },
+                      "digitalCurrencyAddress": {
+                        "type": "string",
+                        "description": "digitalCurrencyAddress"
+                      },
+                      "ids": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "source": {
+                              "type": "string",
+                              "description": "source"
+                            },
+                            "sourceId": {
+                              "type": "string",
+                              "description": "sourceId"
+                            },
+                            "type": {
+                              "type": "string",
+                              "description": "type"
+                            },
+                            "idNumber": {
+                              "type": "string",
+                              "description": "idNumber"
+                            },
+                            "country": {
+                              "type": "string",
+                              "description": "country"
+                            },
+                            "issueDate": {
+                              "type": "string",
+                              "description": "issueDate"
+                            },
+                            "expirationDate": {
+                              "type": "string",
+                              "description": "expirationDate"
+                            },
+                            "idDetailsString": {
+                              "type": "string",
+                              "description": "idDetailsString"
+                            }
+                          }
+                        },
+                        "description": "ids"
+                      }
+                    }
+                  },
+                  "description": "cases"
+                }
+              },
+              "required": [
+                "apiKey",
+                "includeAlias",
+                "informalName"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {},
+  "parameters": {},
+  "responses": {},
+  "securityDefinitions": {
+    "api_key": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "ApiKey"
+    }
+  },
+  "security": [],
+  "tags": []
+}
